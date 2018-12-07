@@ -61,8 +61,8 @@ console.log("document is ready");
   jQuery('.IT_trigger[href^=#]').click(function(e){
     e.preventDefault();
 
-    var xCoord = 0
-    var yCoord = 0
+    var xCoord = 1.59
+    var yCoord = 0.314
 
     localStorage["x"]=$.trim(xCoord);
     localStorage["y"]=$.trim(yCoord);
