@@ -53,7 +53,7 @@ saveCoordsButton.onclick = function(){
 
 //참고 사이트
 // https://codepen.io/JacobLett/pen/QGqYPZ
-
+/*
 jQuery(document).ready(function() {
  // executes when HTML-Document is loaded and DOM is ready
 console.log("document is ready");
@@ -71,6 +71,16 @@ console.log("document is ready");
     jQuery(href).modal('toggle');
   });
 });
+*/
+
+$('#portfolioModal1').on('shown.bs.modal', funcion(e)){
+    var xCoord = -14.8 ;
+    var yCoord = -22.6 ;
+
+    localStorage["x"]=$.trim(xCoord);
+    localStorage["y"]=$.trim(yCoord);
+	
+}
 
 jQuery(document).ready(function() {
  // executes when HTML-Document is loaded and DOM is ready
