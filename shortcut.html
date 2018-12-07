@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Hategi - 하이테크 센터 안내 로봇</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/shortcut.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="vendor/jquery/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery/materialize.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery/index.js"></script>
+
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Hategi</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Home</a></li>
+            <li class="nav-item active"><a class="nav-link js-scroll-trigger" href="shortcut.html">Services<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+   <!-- Portfolio Grid -->
+   <section class="bg-light" id="portfolio">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-12 text-center">
+           <h2 class="section-heading text-uppercase">주요 시설</h2>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+           <form>
+             <div class="form-row">
+               <div class="col-md-8"><input type="text" class="form-control form-control-lg" id="text-box" placeholder="안내를 원하는 장소를 입력하세요..."></div>
+               <div class="col-md-2"><a class="btn btn-default btn-lg" role="button" id="search-button" href="#portfolioModal1" data-toggle="modal" style="border: 1px solid #ddd">검색</a></div>
+               <div class="col-md-2"><a class="btn btn-default btn-lg" id="mic-button" role="button" data-toggle="modal" data-target="#myModal" ><img src="img/mic.gif"></a></div>
+             </div>
+           </form>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-4 col-sm-6 portfolio-item">
+           <!-- http://next.plnkr.co/edit/zI1jbq?p=preview&preview -->
+           <a id=IT_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+           <!-- <a id=IT_trigger class="portfolio-link" data-toggle="modal" href="#" onclick="return ITcafe_coord();"> -->
+           <!-- <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1"> -->
+             <div class="portfolio-hover">
+               <div class="portfolio-hover-content">
+                 <i class="fas fa-plus fa-3x"></i>
+               </div>
+             </div>
+             <img class="img-fluid" src="img/start.jpg" alt="">
+           </a>
+           <div class="portfolio-caption">
+             <h4>IT cafe</h4>
+             <p class="text-muted">IT 카페</p>
+           </div>
+         </div>
+         <div class="col-md-4 col-sm-6 portfolio-item">
+            <!-- <a class="portfolio-link" data-toggle="modal" href="#" onclick="return Toilet_coord();"> -->
+            <a id=Toilet_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/start.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Toilet</h4>
+              <p class="text-muted">화장실</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a id=Library_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/start.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>IT library</h4>
+              <p class="text-muted">공대 도서관</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a id=Copycenter_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/start.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Copy Center</h4>
+              <p class="text-muted">복사실</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a id=Smokingzone_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/start.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Smozing Zone</h4>
+              <p class="text-muted">흡연실</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/start.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Service</h4>
+              <p class="text-muted">서비스 지원</p>
+            </div>
+          </div>
+       </div>
+     </div>
+   </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/JavaScript" src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/JavaScript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+     <!-- Portfolio Modals -->
+     <!-- Modal 1 -->
+     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="close-modal" data-dismiss="modal">
+             <div class="lr">
+               <div class="rl"></div>
+             </div>
+           </div>
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-8 mx-auto">
+                 <div class="modal-body">
+                   <!-- Project Details Go Here -->
+                   <h2 class="text-uppercase">IT카페</h2>
+                   <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                   <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
+                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                   <ul class="list-inline">
+                     <li>Date: January 2017</li>
+                     <li>Client: Threads</li>
+                     <li>Category: Illustration</li>
+                   </ul>
+                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
+                   <a id="escort_btn" class="btn btn-primary btn-lg" role="button" href="#" onclick='Goto(); return flase;'style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">화장실</h2>
+                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
+                  <a id="escort_btn" class="btn btn-primary btn-lg" role="button" href="#about" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">공대도서관</h2>
+                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
+                  <a id="escort_btn" class="btn btn-primary btn-lg" role="button" href="#about" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">복사실</h2>
+                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
+                  <a id="escort_btn" class="btn btn-primary btn-lg" role="button" href="#about" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">흡연장</h2>
+                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
+                  <a id="escort_btn" class="btn btn-primary btn-lg" role="button" href="#about" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">서비스 지원</h2>
+                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
+                  <a class="btn btn-primary btn-lg" role="button" href="#about" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!--음성 인식 처리 모달 윈도우-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-item">
+        <div class="modal-content">
+          <!--언어 선택-->
+          <div class="modal-header">
+            <div class="form-row" id="div_language">
+              <div class="col-12 col-md-6 mb-2 mb-md-0"><h4 id="myModalLabel">Choose language</h4></div>
+              <div class="col-12 col-md-2"><select id="select_language" onchange="updateCountry()"></select></div>
+              <div class="col-12 col-md-3"><select id="select_dialect"></select></div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <!--상태표시-->
+          <div class="modal-body">
+            <div id="info">
+              <p id="info_start">Click on the 'microphone icon' and begin speaking.</p>
+              <p id="info_speak_now">Speak now.</p>
+              <p id="info_no_speech">No speech was detected. You may need to adjust your <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892"> microphone settings</a>.</p>
+              <p id="info_no_microphone" style="display:none">No microphone was found. Ensure that a microphone is installed and that <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892"> microphone settings</a> are configured correctly.</p>
+              <p id="info_allow">Click the "Allow" button above to enable your microphone.</p>
+              <p id="info_denied">Permission to use microphone was denied.</p>
+              <p id="info_blocked">Permission to use microphone is blocked. To change, go to chrome://settings/contentExceptions#media-stream</p>
+              <p id="info_upgrade">Web Speech API is not supported by this browser. Upgrade to <a href="//www.google.com/chrome">Chrome</a>version 25 or later.</p>
+            </div>
+            <!--마이크-->
+            <div class="right">
+              <button id="start_button" onclick="startButton(event)">
+                <img id="start_img" src="img/mic.gif" alt="Start"></button>
+            </div>
+            <!--결과출력-->
+            <div id="results">
+              <span id="final_span" class="final"></span>
+              <span id="interim_span" class="interim"></span>
+              <p>
+            </div>
+            <!-- 검색없이 말하는 대로 엔터되게 수정할것 -->
+            <!-- https://w3c.github.io/speech-api/speechapi.html#tts-methods -->
+          <div class="center">
+            <div class="sidebyside" style="text-align:right">
+              <button id="copy_button" class="button" onclick="copyButton()">
+                Copy and Paste</button>
+              <div id="copy_info" class="info">
+                Press Control-C to copy text.<br>(Command-C on Mac.)
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-default btn-lg" role="button" data-dismiss="modal" aria-label="Close" style="border: 1px solid #ddd">닫기</a>
+            <!-- 음성 인식 결과에 따라 안내 장소가 나오도록 수정 필요------------------------------>
+            <a href="#portfolioModal1" role="button" class="btn btn-primary" data-toggle="modal" style="border: 1px solid #ddd">안내시작</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--webspeech API 처리-->
+    <!--
+    1.언어 설정
+    2. recognition 객체로 음성 인식 및 제어
+    -->
+    <script>
+      var langs =
+      [['한국어',            ['ko-KR']],
+       ['English',         ['en-US']],
+       ['中文',             ['cmn-Hans-CN']],
+       ['日本語',           ['ja-JP']]];
+
+      for (var i = 0; i < langs.length; i++) {
+        select_language.options[i] = new Option(langs[i][0], i);
+      }
+      select_language.selectedIndex = 0; updateCountry();
+      select_dialect.selectedIndex = 0; showInfo('info_start');
+
+      function updateCountry() {
+        for (var i = select_dialect.options.length - 1; i >= 0; i--) {
+          select_dialect.remove(i);
+        }
+        var list = langs[select_language.selectedIndex];
+        for (var i = 1; i < list.length; i++) {
+          select_dialect.options.add(new Option(list[i][1], list[i][0]));
+        }
+        select_dialect.style.visibility = list[1].length == 1 ? 'hidden' : 'visible';
+      }
+
+      var create_email = false;
+      var final_transcript = '';
+      var recognizing = false;
+      var ignore_onend;
+      var start_timestamp;
+      if (!('webkitSpeechRecognition' in window)) {
+        upgrade();
+      } else {
+        start_button.style.display = 'inline-block';
+        var recognition = new webkitSpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+
+        recognition.onstart = function() {
+          recognizing = true;
+          showInfo('info_speak_now');
+          start_img.src = 'img/mic-animate.gif';
+        };
+
+        recognition.onerror = function(event) {
+          if (event.error == 'no-speech') {
+            start_img.src = 'img/mic.gif';
+            showInfo('info_no_speech');
+            ignore_onend = true;
+          }
+          if (event.error == 'audio-capture') {
+            start_img.src = 'mic.img/mic.gif';
+            showInfo('info_no_microphone');
+            ignore_onend = true;
+          }
+          if (event.error == 'not-allowed') {
+            if (event.timeStamp - start_timestamp < 100) {
+              showInfo('info_blocked');
+            } else {
+              showInfo('info_denied');
+            }
+            ignore_onend = true;
+          }
+        };
+
+        recognition.onend = function() {
+          recognizing = false;
+          if (ignore_onend) {
+            return;
+          }
+          start_img.src = 'img/mic.gif';
+          if (!final_transcript) {
+            showInfo('info_start');
+            return;
+          }
+          showInfo('');
+          if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+            var range = document.createRange();
+            range.selectNode(document.getElementById('final_span'));
+            window.getSelection().addRange(range);
+          }
+          if (create_email) {
+            create_email = false;
+            createEmail();
+          }
+        };
+
+        recognition.onresult = function(event) {
+          var interim_transcript = '';
+          for (var i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+              final_transcript += event.results[i][0].transcript;
+            } else {
+              interim_transcript += event.results[i][0].transcript;
+            }
+          }
+          final_transcript = capitalize(final_transcript);
+          final_span.innerHTML = linebreak(final_transcript);
+          interim_span.innerHTML = linebreak(interim_transcript);
+          if (final_transcript || interim_transcript) {
+            showButtons('inline-block');
+          }
+        };
+      }
+
+      function upgrade() {
+        start_button.style.visibility = 'hidden';
+        showInfo('info_upgrade');
+      }
+
+      var two_line = /\n\n/g;
+      var one_line = /\n/g;
+      function linebreak(s) {
+        return s.replace(two_line, '<p></p>').replace(one_line, '<br>');
+      }
+
+      var first_char = /\S/;
+      function capitalize(s) {
+        return s.replace(first_char, function(m) { return m.toUpperCase(); });
+      }
+
+      function createEmail() {
+        var n = final_transcript.indexOf('\n');
+        if (n < 0 || n >= 80) {
+          n = 40 + final_transcript.substring(40).indexOf(' ');
+        }
+        var subject = encodeURI(final_transcript.substring(0, n));
+        var body = encodeURI(final_transcript.substring(n + 1));
+        window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+      }
+
+      function copyButton() {
+        if (recognizing) {
+          recognizing = false;
+          recognition.stop();
+        }
+        copy_button.style.display = 'none';
+        copy_info.style.display = 'inline-block';
+        showInfo('');
+      }
+
+      function emailButton() {
+        if (recognizing) {
+          create_email = true;
+          recognizing = false;
+          recognition.stop();
+        } else {
+          createEmail();
+        }
+        email_button.style.display = 'none';
+        email_info.style.display = 'inline-block';
+        showInfo('');
+      }
+
+      function startButton(event) {
+        if (recognizing) {
+          recognition.stop();
+          return;
+        }
+        final_transcript = '';
+        recognition.lang = select_dialect.value;
+        recognition.start();
+        ignore_onend = false;
+        final_span.innerHTML = '';
+        interim_span.innerHTML = '';
+        start_img.src = 'img/mic-slash.gif';
+        showInfo('info_allow');
+        showButtons('none');
+        start_timestamp = event.timeStamp;
+      }
+
+      function showInfo(s) {
+        if (s) {
+          for (var child = info.firstChild; child; child = child.nextSibling) {
+            if (child.style) {
+              child.style.display = child.id == s ? 'inline' : 'none';
+            }
+          }
+          info.style.visibility = 'visible';
+        } else {
+          info.style.visibility = 'hidden';
+        }
+      }
+
+      var current_style;
+      function showButtons(style) {
+        if (style == current_style) {
+          return;
+        }
+        current_style = style;
+        copy_button.style.display = style;
+        email_button.style.display = style;
+        copy_info.style.display = 'none';
+        email_info.style.display = 'none';
+      }
+      </script>
+</body>
+</html>

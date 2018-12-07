@@ -1,0 +1,25 @@
+/*!
+ * Start Bootstrap - Half Slider (https://startbootstrap.com/template-overviews/half-slider)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-half-slider/blob/master/LICENSE)
+ */
+ body,
+ html {
+   width: 100%;
+   height: 100%;
+ }
+ .masthead {
+   position: relative;
+   width: 100%;
+   height: auto;
+   min-height: 35rem;
+   padding: 15rem 0;
+ }
+
+ .masthead h1 {
+   font-family: 'Varela Round';
+   color: #000000;
+   font-size: 2.5rem;
+   line-height: 2.5rem;
+   letter-spacing: 0.8rem;
+ }
