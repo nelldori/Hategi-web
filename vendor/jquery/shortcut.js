@@ -25,10 +25,18 @@ $(document).ready(function(){
 });
 
 // '바로 안내' 버튼 클릭시 좌표값을 turtlebot_queue 에 저장 (push the coordinates to the server and monitor the status)
+/*
 escortButton.onclick = function(){
   push_xy(myDomain,localStorage["x"],localStorage["y"]);
   statuscheck(myDomain,localStorage["id"]);
 }
+*/
+
+function Goto(){
+  push_xy(myDomain,localStorage["x"],localStorage["y"]);
+  statuscheck(myDomain,localStorage["id"]);
+}
+
 
 
 //when the cancel button is pressed tell the server to cancel the request and update the UI
