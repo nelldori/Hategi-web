@@ -25,7 +25,6 @@ setInterval(function() {
 
 // '바로 안내' 버튼 클릭시 좌표값을 turtlebot_queue 에 저장 (push the coordinates to the server and monitor the status)
 function GotoITcafe(){
-  window.alert("실행이 안되는거니?");
   push_xy(myDomain,"-14.8","-22.6");
   statuscheck(myDomain,localStorage["id"]);
   return true;
@@ -64,7 +63,7 @@ function push_xy(domain,x,y) {
   var id;
   var script = "/Hategi-server/escort_queue.php?push&quat_z=0.892&quat_w=-1.5&point_x="+ x + "&point_y=" + y;
   console.log(script);
-
+  window.alert("실행이 안되는거니?");
   //the server passes back a unique id for this coffee request.
   //That'll allow us to keep track of future coffee requests
 	$.getJSON( domain + script, function( data ) {
