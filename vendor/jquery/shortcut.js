@@ -27,7 +27,6 @@ setInterval(function() {
 function GotoITcafe(){
   push_xy(myDomain,"-14.8","-22.6");
   statuscheck(myDomain,localStorage["id"]);
-  return true;
 }
 
 // function GotoITcafe(){
@@ -63,7 +62,6 @@ function push_xy(domain,x,y) {
   var id;
   var script = "/Hategi-server/escort_queue.php?push&quat_z=0.892&quat_w=-1.5&point_x="+ x + "&point_y=" + y;
   console.log(script);
-  window.alert("실행이 안되는거니?");
   //the server passes back a unique id for this coffee request.
   //That'll allow us to keep track of future coffee requests
 	$.getJSON( domain + script, function( data ) {
