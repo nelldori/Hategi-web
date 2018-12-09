@@ -14,15 +14,13 @@ setInterval(function() {
 
 $(document).ready(function(){
   // 특정 모달이 클릭 되었을때 장소의 좌표만 저장
-  //$('.IT_trigger').click( function(){
-  $("#portfolioModal1").on('shown.bs.modal', function(){
+  $("#portfolioModal2").on('shown.bs.modal', function(){
       // IT cafe 좌표값
       var xCoord = 1.59;
       var yCoord = 0.314;
 
       localStorage["x"]=$.trim(xCoord);
       localStorage["y"]=$.trim(yCoord);
-      console.log(localStorage["x"]+"출력완료");
   });
 });
 
