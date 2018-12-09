@@ -35,12 +35,17 @@ function GotoToilet(){
 }
 
 function GotoLibrary(){
-  //엘베로 이동해서 맵보여줄거야
   push_xy(myDomain,"32.2","-35.6");
   statuscheck(myDomain,localStorage["id"]);
 }
 
 function GotoCopyCenter(){
+  //###########계단 좌표로 수정해줘야함 계단으로 이동해서 맵보여줄거야
+  push_xy(myDomain,"-7.58","-11.3");
+  statuscheck(myDomain,localStorage["id"]);
+}
+
+function GotoOffice(){
   //엘베로 이동해서 맵보여줄거야
   push_xy(myDomain,"-7.58","-11.3");
   statuscheck(myDomain,localStorage["id"]);
