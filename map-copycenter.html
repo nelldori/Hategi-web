@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Hategi - 하이테크 센터 안내 로봇</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/map.css" rel="stylesheet">
+    <script type="text/javascript">
+      var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
+      var targetPos_x=-10; var targetPos_y=-5.31;  //목적지 좌표 (고층부 계단)
+      var tot_distance= Math.abs(targetPos_x - startPos_x) + Math.abs(targetPos_y - startPos_y);  //총 이동거리
+      var speed= 0.6  //걷는 속도 60cm/sec
+      var tot_time = tot_distance / speed;  //총 소요시간
+      var SetTime = tot_time +20 ;		// 최초 설정 시간(기본 : 초), 거부기 세팅시간 20초 부여
+      var SetDistance = tot_distance;
+
+	    function msg_time() {	// 1초씩 카운트
+        m1 = Math.floor(SetTime / 60) + "분 " + Math.floor(SetTime % 60) + "초";	// 남은 시간 계산
+        var msg1 = "예상 소요 시간 : <font color='red'>" + m1 + "</font>";
+        document.getElementById("leftTime").innerHTML = msg1;		// 화면에 출력
+        SetTime-=3;					// 3초씩 감소
+
+        m2 = SetDistance.toFixed(1) + "m ";	// 남은 거리 계산
+        var msg2 = "남은 거리 : <font color='red'>" + m2 + "</font>";
+        document.getElementById("leftDistance").innerHTML = msg2;		// 화면에 출력
+        SetDistance = SetDistance - 3*speed;					// 3*0.6 = 1.8 미터씩 감소
+
+        if (SetTime < 0) { clearInterval(tid); alert("종료"); }// 시간 종료시 타이머 해제
+      }
+      window.onload = function TimerStart(){ tid=setInterval('msg_time()',5000) }; //5초마다 화면 갱신
+
+    </script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Hategi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="shortcut.html">Services<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+   <header class="map">
+     <div class="container">
+       <div class="mx-auto text-center">
+         <h1 class="mx-auto my-0 text-uppercase"> 복사실 로 안내합니다.</h1><br><br>
+         <p>복사실은 2층입니다. 계단으로 안내합니다</p>
+         <div id="toilet_map">
+           <h2 id="leftTime"></h2>
+           <h2 id="leftDistance"></h2>
+         </div>
+         <img class="img-fluid d-block mx-auto" src="img/map_copyCenter.gif" alt=""><br>   <!-- 화장실 안내경로 gif 이미지 -->
+         <a href="giveScore.html" id="finishButton" class="btn btn-primary js-scroll-trigger">서비스 평가하러 GO!</a><br><br><br>
+       </div>
+     </div>
+   </header>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
