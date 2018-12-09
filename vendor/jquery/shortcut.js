@@ -20,9 +20,7 @@ $(document).ready(function(){
       var yCoord = 0.314;
 
       localStorage["x"]=$.trim(xCoord);
-      localStorage["y"]=$.trim(yCoord);
-      document.querySelector('#xCoord').value = localStorage['x'];
-      document.querySelector('#yCoord').value = localStorage['y']; 	
+      localStorage["y"]=$.trim(yCoord);	
       alert('된다구욧!');
   });
 });
