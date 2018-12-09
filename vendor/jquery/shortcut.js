@@ -21,8 +21,8 @@ $(document).ready(function(){
       var yCoord = 0.314;
 
       localStorage["x"]=$.trim(xCoord);
-      localStorage["y"]=$.trim(yCoord);	
-      alert('된다구욧!');
+      localStorage["y"]=$.trim(yCoord);
+      console.log(localStorage["x"]+"출력완료");
   });
 });
 
