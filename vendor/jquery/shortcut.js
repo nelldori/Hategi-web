@@ -11,6 +11,10 @@ setInterval(function() {
     }
 }, 1000);
 
+$("#ITcafe_Escort").on('click', GotoITcafe() {
+  window.location = "map-ITcafe.html";
+});
+
 /*
 장소별 좌표
 
