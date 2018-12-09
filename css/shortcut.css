@@ -39,6 +39,7 @@ section h3.section-subheading {
 .img-fluid{
   height: auto;
   max-width: 100%;
+  color: #fed136;
 }
 
 .btn {
