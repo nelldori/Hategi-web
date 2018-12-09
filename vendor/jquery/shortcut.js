@@ -17,6 +17,7 @@ $('#portfolioModal1').on('shown.bs.modal', funcion(e)){
     // IT cafe 좌표값
     localStorage["x"]= 1.59;   // xCoord
     localStorage["y"]= 0.314;  // yCoord
+    window.alert("된다구욧!");
 }
 
 
