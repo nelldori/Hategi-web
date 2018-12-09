@@ -27,7 +27,13 @@ setInterval(function() {
 function GotoITcafe(){
   push_xy(myDomain,"-14.8","-22.6");
   statuscheck(myDomain,localStorage["id"]);
+  return true;
 }
+
+// function GotoITcafe(){
+//   push_xy(myDomain,"-14.8","-22.6");
+//   statuscheck(myDomain,localStorage["id"]);
+// }
 
 function GotoToilet(){
   push_xy(myDomain,"-12.1","-15.6");
