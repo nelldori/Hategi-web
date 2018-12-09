@@ -29,6 +29,23 @@ function GotoITcafe(){
   statuscheck(myDomain,localStorage["id"]);
 }
 
+function GotoToilet(){
+  push_xy(myDomain,"-12.1","-15.6");
+  statuscheck(myDomain,localStorage["id"]);
+}
+
+function GotoLibrary(){
+  //엘베로 이동해서 맵보여줄거야
+  push_xy(myDomain,"32.2","-35.6");
+  statuscheck(myDomain,localStorage["id"]);
+}
+
+function GotoCopyCenter(){
+  //엘베로 이동해서 맵보여줄거야
+  push_xy(myDomain,"-7.58","-11.3");
+  statuscheck(myDomain,localStorage["id"]);
+}
+
 // json이용해서 도메인, 좌표값 서버에 넘겨 주는 함수
 function push_xy(domain,x,y) {
   var status;
