@@ -21,6 +21,8 @@ $(document).ready(function(){
 
       localStorage["x"]=$.trim(xCoord);
       localStorage["y"]=$.trim(yCoord);
+      document.querySelector('#xCoord').value = localStorage['x'];
+      document.querySelector('#yCoord').value = localStorage['y']; 	
       alert('된다구욧!');
   });
 });
