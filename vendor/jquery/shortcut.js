@@ -11,24 +11,23 @@ setInterval(function() {
     }
 }, 1000);
 
+/*
+장소별 좌표
 
+이니셜포즈 .323 , -1.25
+도킹 1.03, -1.58
+엘베 -7.58, -11.3
+화장실 -12.1, -15.6
+아카 -14.8, -22.6
+공대도서관 32.2 -35.6
+저층부화장실 51.5, -43.5
+*/
 
 // '바로 안내' 버튼 클릭시 좌표값을 turtlebot_queue 에 저장 (push the coordinates to the server and monitor the status)
 function GotoITcafe(){
-  push_xy(myDomain,"1.59","0.314");
+  push_xy(myDomain,"-14.8","-22.6");
   statuscheck(myDomain,localStorage["id"]);
 }
-
-
-
-//when the cancel button is pressed tell the server to cancel the request and update the UI
-// 취소했을때 해당 id 제거해주고 ui전환
-//취소는 없으니까 필요없음
-noEscortButton.onclick = function(){
-  noEscort(myDomain,localStorage["id"]);
-  localStorage.removeItem('id');
-}
-
 
 // json이용해서 도메인, 좌표값 서버에 넘겨 주는 함수
 function push_xy(domain,x,y) {
