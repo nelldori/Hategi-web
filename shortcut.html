@@ -142,10 +142,9 @@
    </section>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/JavaScript" src="vendor/jquery/jquery.min.js"></script>
     <script type="text/JavaScript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
 
@@ -162,25 +161,26 @@
                <div class="col-lg-8 mx-auto">
                  <div class="modal-body">
                    <h2 class="text-uppercase">IT카페</h2>
-                   <img class="img-fluid d-block mx-auto" src="img/map_ITcafe_Still.PNG" alt=""> 
+                   <img class="img-fluid d-block mx-auto" src="img/map_ITcafe_Still.PNG" alt="">
                    <ul class="list-inline">
                      <li><h3>위치: 1층<h3></li>
-                     <li id="time"></li>
-                     <li id="distance"></li>
+                     <li id="time1"></li>
+                     <li id="distance1"></li>
                      <script type="text/javascript">
                        var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
                        var targetPos_x=-14.8; var targetPos_y=-22.6;  //목적지 좌표
                        var tot_distance= Math.abs(targetPos_x - startPos_x) + Math.abs(targetPos_y - startPos_y);  //총 이동거리
-                       var speed= 0.6  //걷는 속도 60cm/sec
+                       var speed= 0.6;  //걷는 속도 60cm/sec
                        var tot_time = tot_distance / speed;  //총 소요시간
                        m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
 
-                       var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
-                       var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                       var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time1").innerHTML = msg1;
+                       var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance1").innerHTML = msg2;
                      </script>
                    </ul>
                    <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
-                   <a class="btn btn-primary btn-lg" role="button" href="map-ITcafe.html" onclick="return GotoITcafe();" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                   <a class="btn btn-primary btn-lg" role="button" href="map-ITcafe.html" onclick='GotoITcafe(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                   <!-- <a class="btn btn-primary btn-lg" role="button" href="map-ITcafe.html" onclick="return GotoITcafe();" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a> -->
                  </div>
                  </div>
                </div>
@@ -207,18 +207,18 @@
                   <img class="img-fluid d-block mx-auto" src="img/map_Toilet_Still.PNG" alt="">
                   <ul class="list-inline">
                     <li><h3>위치: 1층<h3></li>
-                    <li id="time"></li>
-                    <li id="distance"></li>
+                    <li id="time2"></li>
+                    <li id="distance2"></li>
                     <script type="text/javascript">
-                    var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
-                    var targetPos_x=-12.1; var targetPos_y=-15.6;  //목적지 좌표
+                      var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
+                      var targetPos_x=-12.1; var targetPos_y=-15.6;  //목적지 좌표
                       var tot_distance= Math.abs(targetPos_x - startPos_x) + Math.abs(targetPos_y - startPos_y);  //총 이동거리
-                      var speed= 0.6  //걷는 속도 60cm/sec
+                      var speed= 0.6;  //걷는 속도 60cm/sec
                       var tot_time = tot_distance / speed;  //총 소요시간
                       m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
 
-                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
-                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time2").innerHTML = msg1;
+                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance2").innerHTML = msg2;
                     </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
@@ -248,20 +248,19 @@
                   <img class="img-fluid d-block mx-auto" src="img/map_Library_Still.PNG" alt="">
                   <ul class="list-inline">
                     <li><h3>위치: 1층<h3></li>
-                    <li id="time"></li>
-                    <li id="distance"></li>
+                    <li id="time3"></li>
+                    <li id="distance3"></li>
                     <script type="text/javascript">
                     var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
                     var midPos_x=-14.8; var midPos_y=-22.6;      // 아이티카페좌표 (경유)
                     var targetPos_x=-14.8; var targetPos_y=-22.6;  //목적지 좌표
-                    var tot_distance= Math.abs(targetPos_x - midPos_x) + Math.abs(targetPos_y - midPos_y)
-                      + Math.abs(midPos_x - startPos_x) + Math.abs(midPos_y - startPos_y);  //총 이동거리
-                    var speed= 0.6  //걷는 속도 60cm/sec
+                    var tot_distance= Math.abs(targetPos_x - midPos_x) + Math.abs(targetPos_y - midPos_y)+ Math.abs(midPos_x - startPos_x) + Math.abs(midPos_y - startPos_y);  //총 이동거리
+                    var speed= 0.6;  //걷는 속도 60cm/sec
                     var tot_time = tot_distance / speed;  //총 소요시간
                     m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
 
-                    var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
-                    var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                    var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time3").innerHTML = msg1;
+                    var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance3").innerHTML = msg2;
                     </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
@@ -292,8 +291,8 @@
                   <img class="img-fluid d-block mx-auto" src="img/map_Copyzone_Still.PNG" alt="">
                   <ul class="list-inline">
                     <li><h3>위치: 2층<h3></li>
-                    <li id="time"></li>
-                    <li id="distance"></li>
+                    <li id="time4"></li>
+                    <li id="distance4"></li>
                     <script type="text/javascript">
                     var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
                     var targetPos_x=-10; var targetPos_y=-5.31;  //목적지 좌표 (고층부 계단)
@@ -302,8 +301,8 @@
                       var tot_time = tot_distance / speed;  //총 소요시간
                       m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
 
-                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
-                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time4").innerHTML = msg1;
+                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance4").innerHTML = msg2;
                     </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
@@ -332,11 +331,10 @@
                   <h2 class="text-uppercase">과사무실</h2>
                   <p class="item-intro text-muted">10층에 있습니다. 엘레베이터을 이용하세요.</p>
                   <img class="img-fluid d-block mx-auto" src="img/map_Office_Still.PNG" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li><h3>위치: 10층<h3></li>
-                    <li id="time"></li>
-                    <li id="distance"></li>
+                    <li id="time5"></li>
+                    <li id="distance5"></li>
                     <script type="text/javascript">
                       var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
                       var targetPos_x=-14.8; var targetPos_y=-22.6;  //목적지 좌표
@@ -345,8 +343,8 @@
                       var tot_time = tot_distance / speed;  //총 소요시간
                       m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
 
-                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
-                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time5").innerHTML = msg1;
+                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance5").innerHTML = msg2;
                     </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
