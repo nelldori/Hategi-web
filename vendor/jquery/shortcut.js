@@ -13,7 +13,7 @@ setInterval(function() {
 
 
 // 특정 모달이 클릭 되었을때 장소의 좌표만 저장
-$('#portfolioModal1').on('shown.bs.modal', function(e)){
+$('#portfolioModal1').on('shown.bs.modal', function()){
     // IT cafe 좌표값
     localStorage["x"]= 1.59;   // xCoord
     localStorage["y"]= 0.314;  // yCoord
