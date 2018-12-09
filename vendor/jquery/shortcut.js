@@ -25,6 +25,7 @@ setInterval(function() {
 
 // '바로 안내' 버튼 클릭시 좌표값을 turtlebot_queue 에 저장 (push the coordinates to the server and monitor the status)
 function GotoITcafe(){
+  window.alert("실행이 안되는거니?");
   push_xy(myDomain,"-14.8","-22.6");
   statuscheck(myDomain,localStorage["id"]);
   return true;
