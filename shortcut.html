@@ -119,8 +119,8 @@
               <img class="img-fluid" src="img/start.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Office</h4>
-              <p class="text-muted">과사무실</p>
+              <h4>Smozing Zone</h4>
+              <p class="text-muted">흡연실</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -160,18 +160,26 @@
              <div class="row">
                <div class="col-lg-8 mx-auto">
                  <div class="modal-body">
-                   <!-- Project Details Go Here -->
                    <h2 class="text-uppercase">IT카페</h2>
-                   <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
-                   <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
-                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                   <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">  // 이미지 경로 수정필요
                    <ul class="list-inline">
-                     <li>Date: January 2017</li>
-                     <li>Client: Threads</li>
-                     <li>Category: Illustration</li>
+                     <li><h3>위치: 1층<h3></li>
+                     <li id="time"></li>
+                     <li id="distance"></li>
+                     <script type="text/javascript">
+                       var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
+                       var targetPos_x=-14.8; var targetPos_y=-22.6;  //목적지 좌표
+                       var tot_distance= Math.abs(targetPos_x - startPos_x) + Math.abs(targetPos_y - startPos_y);  //총 이동거리
+                       var speed= 0.6  //걷는 속도 60cm/sec
+                       var tot_time = tot_distance / speed;  //총 소요시간
+                       m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
+
+                       var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
+                       var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                     </script>
                    </ul>
                    <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
-                   <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoITcafe(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                   <a class="btn btn-primary btn-lg" role="button" href="map-ITcafe.html" onclick='GotoITcafe(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
                  </div>
                  </div>
                </div>
@@ -205,7 +213,7 @@
                     <li>Category: Illustration</li>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
-                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoToilet(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='Goto(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
                 </div>
               </div>
             </div>
@@ -238,7 +246,7 @@
                     <li>Category: Illustration</li>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
-                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoLibrary(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='Goto(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
                 </div>
               </div>
             </div>
@@ -271,7 +279,7 @@
                     <li>Category: Illustration</li>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
-                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoCopyCenter(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='Goto(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
                 </div>
               </div>
             </div>
@@ -294,7 +302,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">과사무실</h2>
+                  <h2 class="text-uppercase">흡연장</h2>
                   <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
                   <img class="img-fluid d-block mx-auto" src="img/sample_map.png" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
@@ -304,7 +312,7 @@
                     <li>Category: Illustration</li>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
-                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoOffice(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                  <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='Goto(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
                 </div>
               </div>
             </div>
