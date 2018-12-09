@@ -149,8 +149,7 @@
 
 
      <!-- Portfolio Modals -->
-     <!-- Modal 1 -->
-     <!-- Modal 1 -->
+     <!-- Modal IT카페 -->
      <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
        <div class="modal-dialog">
          <div class="modal-content">
@@ -162,7 +161,7 @@
                <div class="col-lg-8 mx-auto">
                  <div class="modal-body">
                    <h2 class="text-uppercase">IT카페</h2>
-                   <img class="img-fluid d-block mx-auto" src="img/map_ITcafe_Still.PNG" alt="">
+                   <img class="img-fluid d-block mx-auto" src="img/map_ITcafe_Still.PNG" alt=""> 
                    <ul class="list-inline">
                      <li><h3>위치: 1층<h3></li>
                      <li id="time"></li>
@@ -180,7 +179,7 @@
                      </script>
                    </ul>
                    <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
-                   <a class="btn btn-primary btn-lg" role="button" href="map_ITcafe.html" onclick='GotoITcafe(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
+                   <a class="btn btn-primary btn-lg" role="button" href="map-ITcafe.html" onclick='GotoITcafe(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
                  </div>
                  </div>
                </div>
@@ -190,7 +189,7 @@
        </div>
      </div>
 
-     <!-- Modal 2 -->
+     <!-- Modal 화장실 -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -203,15 +202,23 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">화장실</h2>
-                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
                   <img class="img-fluid d-block mx-auto" src="img/map_Toilet_Still.PNG" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li><h3>위치: 1층<h3></li>
+                    <li id="time"></li>
+                    <li id="distance"></li>
+                    <script type="text/javascript">
+                    var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
+                    var targetPos_x=-12.1; var targetPos_y=-15.6;  //목적지 좌표
+                      var tot_distance= Math.abs(targetPos_x - startPos_x) + Math.abs(targetPos_y - startPos_y);  //총 이동거리
+                      var speed= 0.6  //걷는 속도 60cm/sec
+                      var tot_time = tot_distance / speed;  //총 소요시간
+                      m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
+
+                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
+                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                    </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
                   <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoToilet(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
@@ -223,7 +230,7 @@
       </div>
     </div>
 
-    <!-- Modal 3 -->
+    <!-- Modal 공대도서관 -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -236,15 +243,25 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">공대도서관</h2>
-                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
                   <img class="img-fluid d-block mx-auto" src="img/map_Library_Still.PNG" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li><h3>위치: 1층<h3></li>
+                    <li id="time"></li>
+                    <li id="distance"></li>
+                    <script type="text/javascript">
+                    var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
+                    var midPos_x=-14.8; var midPos_y=-22.6;      // 아이티카페좌표 (경유)
+                    var targetPos_x=-14.8; var targetPos_y=-22.6;  //목적지 좌표
+                    var tot_distance= Math.abs(targetPos_x - midPos_x) + Math.abs(targetPos_y - midPos_y)
+                      + Math.abs(midPos_x - startPos_x) + Math.abs(midPos_y - startPos_y);  //총 이동거리
+                    var speed= 0.6  //걷는 속도 60cm/sec
+                    var tot_time = tot_distance / speed;  //총 소요시간
+                    m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
+
+                    var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
+                    var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                    </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
                   <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoLibrary(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
@@ -256,7 +273,7 @@
       </div>
     </div>
 
-    <!-- Modal 4 -->
+    <!-- Modal 복사실 -->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -269,15 +286,24 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">복사실</h2>
-                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                  <p class="item-intro text-muted">2층에 있습니다. 계단을 이용하세요.</p>
                   <img class="img-fluid d-block mx-auto" src="img/map_Copyzone_Still.PNG" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li><h3>위치: 2층<h3></li>
+                    <li id="time"></li>
+                    <li id="distance"></li>
+                    <script type="text/javascript">
+                    var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
+                    var targetPos_x=-10; var targetPos_y=-5.31;  //목적지 좌표 (고층부 계단)
+                      var tot_distance= Math.abs(targetPos_x - startPos_x) + Math.abs(targetPos_y - startPos_y);  //총 이동거리
+                      var speed= 0.6  //걷는 속도 60cm/sec
+                      var tot_time = tot_distance / speed;  //총 소요시간
+                      m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
+
+                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
+                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                    </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
                   <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoCopyCenter(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
@@ -289,7 +315,7 @@
       </div>
     </div>
 
-    <!-- Modal 5 -->
+    <!-- Modal 과사무실 -->
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -302,15 +328,25 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">과사무실</h2>
-                  <p class="item-intro text-muted">정면으로 n미터 직진합니다.</p>
+                  <p class="item-intro text-muted">10층에 있습니다. 엘레베이터을 이용하세요.</p>
                   <img class="img-fluid d-block mx-auto" src="img/map_Office_Still.PNG" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li><h3>위치: 10층<h3></li>
+                    <li id="time"></li>
+                    <li id="distance"></li>
+                    <script type="text/javascript">
+                      var startPos_x=0.323; var startPos_y=-1.25;   //시작좌표
+                      var targetPos_x=-14.8; var targetPos_y=-22.6;  //목적지 좌표
+                      var tot_distance= Math.abs(targetPos_x - startPos_x) + Math.abs(targetPos_y - startPos_y);  //총 이동거리
+                      var speed= 0.6  //걷는 속도 60cm/sec
+                      var tot_time = tot_distance / speed;  //총 소요시간
+                      m1 = Math.floor(tot_time / 60) + "분 " + Math.floor(tot_time % 60) + "초";
+
+                      var msg1= "<h3>예상 소요시간: "+ m1 +"</h3>";  document.getElementById("time").innerHTML = msg1;
+                      var msg2= "<h3>총 이동거리: "+tot_distance.toFixed(1)+" m</h3> ";  document.getElementById("distance").innerHTML = msg2;
+                    </script>
                   </ul>
                   <a class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
                   <a class="btn btn-primary btn-lg" role="button" href="map.html" onclick='GotoOffice(); return false;' style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
@@ -323,6 +359,7 @@
     </div>
 
     <!-- Modal 6 -->
+    //6번모달 수정필요 (스카이프 페이지임)
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
       <div class="modal-dialog">
         <div class="modal-content">
