@@ -41,7 +41,7 @@ function GotoLibrary(){
 
 function GotoCopyCenter(){
   //###########계단 좌표로 수정해줘야함 계단으로 이동해서 맵보여줄거야
-  push_xy(myDomain,"-7.58","-11.3");
+  push_xy(myDomain,"-10","-5.31");
   statuscheck(myDomain,localStorage["id"]);
 }
 
