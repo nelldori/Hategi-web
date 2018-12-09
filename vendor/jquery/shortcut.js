@@ -12,28 +12,10 @@ setInterval(function() {
 }, 1000);
 
 
-$(document).ready(function(){
-  // 특정 모달이 클릭 되었을때 장소의 좌표만 저장
-  $("#portfolioModal2").on('shown.bs.modal', function(){
-      // IT cafe 좌표값
-      var xCoord = 1.59;
-      var yCoord = 0.314;
-
-      localStorage["x"]=$.trim(xCoord);
-      localStorage["y"]=$.trim(yCoord);
-  });
-});
 
 // '바로 안내' 버튼 클릭시 좌표값을 turtlebot_queue 에 저장 (push the coordinates to the server and monitor the status)
-/*
-escortButton.onclick = function(){
-  push_xy(myDomain,localStorage["x"],localStorage["y"]);
-  statuscheck(myDomain,localStorage["id"]);
-}
-*/
-
-function Goto(){
-  push_xy(myDomain,localStorage["x"],localStorage["y"]);
+function GotoITcafe(){
+  push_xy(myDomain,"1.59","0.314");
   statuscheck(myDomain,localStorage["id"]);
 }
 
