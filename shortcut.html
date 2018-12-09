@@ -55,9 +55,9 @@
 
            <!-- 1. IT 카페-->
            <!-- http://next.plnkr.co/edit/zI1jbq?p=preview&preview -->
-           <!-- <a id=IT_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal1"> -->
+           <a id=IT_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
            <!-- <a id=IT_trigger class="portfolio-link" data-toggle="modal" href="#" onclick="return ITcafe_coord();"> -->
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+           <!-- <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1"> -->
              <div class="portfolio-hover">
                <div class="portfolio-hover-content">
                  <i class="fas fa-plus fa-3x"></i>
@@ -70,6 +70,8 @@
              <p class="text-muted">IT 카페</p>
            </div>
          </div>
+
+         
          <div class="col-md-4 col-sm-6 portfolio-item">
             <!-- <a class="portfolio-link" data-toggle="modal" href="#" onclick="return Toilet_coord();"> -->
             <a id=Toilet_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
@@ -154,13 +156,11 @@
 
      <!-- Portfolio Modals -->
      <!-- Modal 1 -->
-     <div class="portfolio-modal modal" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
        <div class="modal-dialog">
          <div class="modal-content">
            <div class="close-modal" data-dismiss="modal">
-             <div class="lr">
-               <div class="rl"></div>
-             </div>
+             <div class="lr"><div class="rl"></div></div>
            </div>
            <div class="container">
              <div class="row">
@@ -352,12 +352,6 @@
     </div>
 
 
-
-
-
-
-
-
      <!--음성 인식 처리 모달 윈도우-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-item">
@@ -418,13 +412,23 @@
     <script type="text/javascript" src="vendor/jquery/materialize.min.js"></script>
     <script type="text/javascript" src="vendor/jquery/shortcut.js"></script>
 
-
-
     <!--webspeech API 처리-->
     <!--
     1.언어 설정
     2. recognition 객체로 음성 인식 및 제어
     -->
+    <script>
+    $(document).ready(function(){
+      // 특정 모달이 클릭 되었을때 장소의 좌표만 저장
+      $("#portfolioModal1").on('shown.bs.modal', function(){
+          // IT cafe 좌표값
+          localStorage["x"]= 1.59;   // xCoord
+          localStorage["y"]= 0.314;  // yCoord
+          alert('된다구욧!');
+      });
+    });
+    </script>
+
     <script>
       var langs =
       [['한국어',            ['ko-KR']],
