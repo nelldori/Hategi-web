@@ -1,7 +1,8 @@
 
 //자바스크립트로 현재 url가져오기(?)
 myDomain = "http://" + window.location.host;
-
+localStorage["x"]= 0;  // xCoord
+localStorage["y"]= 0;  // yCoord
 
 //하테기 상태를 매초마다 체크
 setInterval(function() {
