@@ -71,7 +71,7 @@
            </div>
          </div>
 
-         
+
          <div class="col-md-4 col-sm-6 portfolio-item">
             <!-- <a class="portfolio-link" data-toggle="modal" href="#" onclick="return Toilet_coord();"> -->
             <a id=Toilet_trigger class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
@@ -156,7 +156,7 @@
 
      <!-- Portfolio Modals -->
      <!-- Modal 1 -->
-     <div class="portfolio-modal modal fade" id="portfolio" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
+     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
        <div class="modal-dialog">
          <div class="modal-content">
            <div class="close-modal" data-dismiss="modal">
@@ -176,8 +176,8 @@
                      <li>Client: Threads</li>
                      <li>Category: Illustration</li>
                    </ul>
-                   <button type="button" id="noEscortButton" class="btn btn-primary btn-lg" onclick="location.href='giveScore.html'" style="border: 1px solid #ddd">확인</button>
-                   <button type="button" id="escortButton" class="btn btn-primary btn-lg" onclick="location.href='map.html'" style="border: 1px solid #ddd">바로안내</button>
+                   <a id="noEscortButton" class="btn btn-primary btn-lg" role="button" href="giveScore.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>확인</a>
+                   <a id="escortButton" class="btn btn-primary btn-lg" role="button" href="map.html" style="border: 1px solid #ddd"><i class="fas fa-times"></i>바로안내</a>
                  </div>
                </div>
              </div>
@@ -417,17 +417,6 @@
     1.언어 설정
     2. recognition 객체로 음성 인식 및 제어
     -->
-    <script>
-    $(document).ready(function(){
-      // 특정 모달이 클릭 되었을때 장소의 좌표만 저장
-      $("#portfolioModal1").on('shown.bs.modal', function(){
-          // IT cafe 좌표값
-          localStorage["x"]= 1.59;   // xCoord
-          localStorage["y"]= 0.314;  // yCoord
-          alert('된다구욧!');
-      });
-    });
-    </script>
 
     <script>
       var langs =
