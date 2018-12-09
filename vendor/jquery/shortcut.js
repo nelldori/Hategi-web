@@ -11,15 +11,15 @@ setInterval(function() {
     }
 }, 1000);
 
-
-// 특정 모달이 클릭 되었을때 장소의 좌표만 저장
-$('#portfolioModal1').on('shown.bs.modal', function()){
-    // IT cafe 좌표값
-    localStorage["x"]= 1.59;   // xCoord
-    localStorage["y"]= 0.314;  // yCoord
-    window.alert("된다구욧!");
-}
-
+$(document).ready(function(){
+  // 특정 모달이 클릭 되었을때 장소의 좌표만 저장
+  $('#portfolioModal1').on('shown.bs.modal', function(e)){
+      // IT cafe 좌표값
+      localStorage["x"]= 1.59;   // xCoord
+      localStorage["y"]= 0.314;  // yCoord
+      window.alert("된다구욧!");
+  });
+});
 
 // '바로 안내' 버튼 클릭시 좌표값을 turtlebot_queue 에 저장 (push the coordinates to the server and monitor the status)
 escortButton.onclick = function(){
