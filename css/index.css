@@ -124,7 +124,8 @@ body, html {
 }
 
 img{
-   height: 70%
+   height: 30px;
+   width:30px;
 }
 
 body {
