@@ -108,45 +108,17 @@ body, html {
   background-size: cover;
 }
 
-.masthead h1 {
-  font-family: 'Varela Round';
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.masthead h2 {
-  max-width: 20rem;
-  font-size: 1rem;
-}
-
-@media (min-width: 768px) {
-  .masthead h1 {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-}
-
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
     padding: 0;
   }
-  .masthead h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
-    letter-spacing: 0.8rem;
-  }
-  .masthead h2 {
-    max-width: 30rem;
-    font-size: 1.25rem;
-  }
 }
 
 .btn {
+  position: relative;
+  right: 50px;
+  top: 250px
   background: url("../img/ok.jpg");
   padding: 1.25rem 2rem;
   font-size: 80%;
@@ -155,7 +127,7 @@ body, html {
 }
 
 .btn-primary {
-  background-color: #64a19d;
+  background: url("../img/ok.jpg");
 }
 
 .btn-primary:hover {
@@ -169,6 +141,11 @@ body, html {
 
 .btn-primary:active {
   background-color: #467370 !important;
+}
+
+.btn-img{
+   width=80%
+   Height=80%
 }
 
 body {
