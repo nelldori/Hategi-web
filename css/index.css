@@ -101,20 +101,11 @@ body, html {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/startpage.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/startpage.jpg");
+  background: url("../img/startpage.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-}
-
-#start-button{
-  border: 0px;
-  background-color: yellow;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .masthead h1 {
@@ -156,8 +147,7 @@ body, html {
 }
 
 .btn {
-  background-image: url("../img/ok.jpg");
-  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  background: url("../img/ok.jpg");
   padding: 1.25rem 2rem;
   font-size: 80%;
   text-transform: uppercase;
