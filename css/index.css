@@ -97,12 +97,8 @@ body, html {
 
 .masthead {
   position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
   padding: 15rem 0;
-  background: url("../img/startpage.jpg");
-  background-position: center;
+  background: url("../img/startpage_right.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -110,69 +106,29 @@ body, html {
 
 @media (min-width: 992px) {
   .masthead {
+    background: url("../img/startpage_right.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
     height: 100vh;
     padding: 0;
   }
 }
 
-.btn {
+#div1{
   position: relative;
-  right: 50px;
-  top: 250px
-  background: url("../img/ok.jpg");
-  padding: 1.25rem 2rem;
-  font-size: 80%;
-  text-transform: uppercase;
-  border: 0;
+  top: 40vh;
+  left:100px;
+  width:992px;
+  height:100px;
 }
 
-.btn-primary {
-  background: url("../img/ok.jpg");
-}
-
-.btn-primary:hover {
-  background-color: #4f837f;
-}
-
-.btn-primary:focus {
-  background-color: #4f837f;
-  color: white;
-}
-
-.btn-primary:active {
-  background-color: #467370 !important;
-}
-
-.btn-img{
-   width=80%
-   Height=80%
-}
 
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
 }
 
-a {
-  color: #64a19d;
-}
-
-a:focus, a:hover {
-  text-decoration: none;
-  color: #3c6360;
-}
-
-.bg-black {
-  background-color: #161616 !important;
-}
-
-.bg-primary {
-  background-color: #64a19d !important;
-}
-
-.text-primary {
-  color: #64a19d !important;
-}
 
 footer {
   padding: 5rem 0;
