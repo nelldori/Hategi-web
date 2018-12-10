@@ -123,6 +123,9 @@ body, html {
   height:100px;
 }
 
+img{
+   height: 70%
+}
 
 body {
   font-family: 'Nunito';
