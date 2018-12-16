@@ -31,7 +31,7 @@
         document.getElementById("leftDistance").innerHTML = msg2;		// 화면에 출력
         SetDistance = SetTime * speed;					// 3*0.6 = 1.8 미터씩 감소
 
-        if (SetTime < 0) { clearInterval(tid); alert("종료"); }// 시간 종료시 타이머 해제
+        if (SetTime < 0) { clearInterval(tid); alert("엘리베이터에 도착했습니다."); }// 시간 종료시 타이머 해제
       }
       window.onload = function TimerStart(){ tid=setInterval('msg_time()',5000) }; //5초마다 화면 갱신
     </script>
