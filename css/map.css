@@ -24,7 +24,7 @@
  }
 
 .map img{
-  border:1px solid #000000;
+  border:5px dashed #000000;
   max-width: 100%;
   height: auto;
 }

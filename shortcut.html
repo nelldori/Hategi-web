@@ -14,15 +14,21 @@
   </head>
 
   <body>
-    <!-- Navigation -->
+    <!-- Navigation 맨 위에 바-->
+
+  <audio autoplay>
+    <source src="img/hello.mp3" type="audio/mp3">
+   </audio>
+
+ 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Hategi</a>
+        <a class="navbar-brand" href="first.html">Hategi</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="first.html">Home</a></li>
             <li class="nav-item active"><a class="nav-link js-scroll-trigger" href="shortcut.html">Services<span class="sr-only">(current)</span></a></li>
             <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
           </ul>
@@ -32,7 +38,6 @@
 
    <!-- Portfolio Grid -->
    <section class="bg-light" id="portfolio">
-       <div class="row">
          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
            <form>
              <div class="form-row">
@@ -42,25 +47,19 @@
              </div>
            </form>
          </div>
-       </div><br><br>
        <div class="container">
-         <div class="row">
-           <div class="col-lg-12 text-center">
-             <h3 class="section-heading text-uppercase">주요 시설</h3>
-           </div>
-         </div>
        <div class="row" style="border-style: dashed">
          <!-- 6개의 안내 장소-->
          <div class="col-md-4 col-sm-6 portfolio-item">
 
            <!-- 1. IT 카페-->
-           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1" onclick="sound();">
              <div class="portfolio-hover">
                <div class="portfolio-hover-content">
                  <i class="fas fa-plus fa-3x"></i>
                </div>
              </div>
-             <div class="text-center"><img class="img-fluid" src="img/coffee-beans.png" alt=""></div>
+             <div class="text-center"><img class="img-fluid" src="img/coffee-beans.png" alt="" style="margin:40px 0px"></div>
            </a>
            <div class="portfolio-caption">
              <h4>IT cafe</h4>
@@ -68,13 +67,13 @@
            </div>
          </div>
          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2" onclick="sound();">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <div class="text-center"><img class="img-fluid" src="img/toilet.png" alt=""></div>
+              <div class="text-center"><img class="img-fluid" src="img/toilet.png" alt="" style="margin:40px 0px"></div>
             </a>
             <div class="portfolio-caption">
               <h4>Toilet</h4>
@@ -82,13 +81,13 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3" onclick="sound();">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <div class="text-center"><img class="img-fluid" src="img/copy.png" alt=""></div>
+              <div class="text-center"><img class="img-fluid" src="img/copy.png" alt="" style="margin:40px 0px"></div>
             </a>
             <div class="portfolio-caption">
               <h4>IT library</h4>
@@ -96,13 +95,13 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4" onclick="sound();">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <div class="text-center"><img class="img-fluid" src="img/archives.png" alt=""></div>
+              <div class="text-center"><img class="img-fluid" src="img/archives.png" alt="" style="margin:40px 0px"></div>
             </a>
             <div class="portfolio-caption">
               <h4>Copy Center</h4>
@@ -110,13 +109,13 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5" onclick="sound();">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <div class="text-center"><img class="img-fluid" src="img/office.png" alt=""></div>
+              <div class="text-center"><img class="img-fluid" src="img/office.png" alt="" style="margin:40px 0px"></div>
             </a>
             <div class="portfolio-caption">
               <h4>Office</h4>
@@ -130,7 +129,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <div class="text-center"><img class="img-fluid" src="img/teamwork.png" alt=""></div>
+              <div class="text-center"><img class="img-fluid" src="img/teamwork.png" alt="" style="margin:40px 0px"></div>
             </a>
             <div class="portfolio-caption">
               <h4>Service</h4>
@@ -148,7 +147,8 @@
     <script type="text/JavaScript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
      <!-- Portfolio Modals -->
-     <!-- Modal IT카페 -->
+     <!-- Modal 'IT카페' -->
+
      <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1600;">
        <div class="modal-dialog">
          <div class="modal-content">
@@ -162,6 +162,7 @@
                    <h2 class="text-uppercase">IT카페</h2>
                    <img class="img-fluid d-block mx-auto" src="img/map_ITcafe_Still.PNG" alt="">
                    <ul class="list-inline">
+
                      <li><h3>위치: 1층<h3></li>
                      <li id="time1"></li>
                      <li id="distance1"></li>
@@ -287,7 +288,7 @@
                 <div class="modal-body">
                   <h2 class="text-uppercase">복사실</h2>
                   <p class="item-intro text-muted">2층에 있습니다. 계단을 이용하세요.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/map_Copycenter_Still.PNG" alt="">
+                  <img class="img-fluid d-block mx-auto" src="img/map_Copyzone_Still.PNG" alt="">
                   <ul class="list-inline">
                     <li><h3>위치: 2층<h3></li>
                     <li id="time4"></li>
