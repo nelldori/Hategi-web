@@ -23,7 +23,7 @@
         m1 = Math.floor(SetTime / 60) + "분 " + Math.floor(SetTime % 60) + "초";	// 남은 시간 계산
         var msg1 = "예상 소요 시간 : <font color='red'>" + m1 + "</font>";
         document.getElementById("leftTime").innerHTML = msg1;		// 화면에 출력
-        SetTime-=3;					// 3초씩 감소
+        SetTime-=2;					// 3초씩 감소
         m2 = SetDistance.toFixed(1) + "m ";	// 남은 거리 계산
         var msg2 = "남은 거리 : <font color='red'>" + m2 + "</font>";
         document.getElementById("leftDistance").innerHTML = msg2;		// 화면에 출력
