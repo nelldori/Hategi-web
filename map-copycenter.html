@@ -36,6 +36,25 @@
       window.onload = function TimerStart(){ tid=setInterval('msg_time()',5000) }; //5초마다 화면 갱신
 
     </script>
+	  <style>
+    .button{
+      width:200px;
+      background-color: #f8585b;
+    border: none;
+    color:#fff;
+    padding: 20px 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px;
+    border-radius:10px;
+    }
+    .button:hover{
+      text-decoration: none;
+      color:white;
+    }
+
+  </style>
   </head>
 
   <body>
@@ -72,7 +91,7 @@
            <h2 id="leftDistance"></h2>
          </div><br>
          <img class="img-fluid d-block mx-auto" src="img/map_Stair.gif" alt=""><br>   <!-- 화장실 안내경로 gif 이미지 -->
-         <a href="giveScore2.html" id="finishButton" class="btn btn-primary js-scroll-trigger">서비스 평가하러 GO!</a><br><br><br>
+         <a href="giveScore2.html" id="finishButton" class="button">서비스 평가하러 GO!</a><br><br><br>
        </div>
      </div>
    </header>
