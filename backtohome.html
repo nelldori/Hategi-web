@@ -23,17 +23,17 @@
    #divPosition2{
     position:absolute; height:300px; width:200px;
       margin:-300px 0px 0px -330px;
-      top:50%; left:50%; padding:5px;
+      top:47%; left:56%; padding:5px;
    }
 
   .bubble
   {
   position: relative;
-  width: 110px;
-  height: 58px;
+  width: 360px;
+  height: 30px;
   padding: 20px;
   background: #FFFFFF;
-  -webkit-border-radius: 37px;
+  -webkit-border-radius: 40px;
   -moz-border-radius: 37px;
   border-radius: 37px;
   border: #7F7F7F solid 6px;
@@ -49,7 +49,7 @@
   display: block;
   width: 0;
   z-index: 1;
-  margin-left: -11px;
+  margin-left: -20px;
   bottom: -15px;
   left: 62%;
   }
@@ -64,12 +64,12 @@
   display: block;
   width: 0;
   z-index: 0;
-  margin-left: -14px;
+  margin-left: -23px;
   bottom: -22px;
   left: 62%;
   }
 
-     .blinking{
+  .blinking{
     -webkit-animation:blink 1s ease-in-out infinite alternate;
 
       animation:blink 1s ease-in-out infinite alternate;
@@ -102,12 +102,12 @@
     function msg_time() {	// 1초씩 카운트
       m1 = Math.floor(SetTime / 60) + "분 " + Math.floor(SetTime % 60) + "초";	// 남은 시간 계산
       var msg1 = "예상 소요 시간 : <font color='red'>" + m1 + "</font>";
-      document.getElementById("leftTime").innerHTML = msg1;		// 화면에 출력 ((지후야 이거 지워))
+      //document.getElementById("leftTime").innerHTML = msg1;		// 화면에 출력 ((지후야 이거 지워))
       SetTime-=1;					// 3초씩 감소
 
       m2 = SetDistance.toFixed(1) + "m ";	// 남은 거리 계산
       var msg2 = "남은 거리 : <font color='red'>" + m2 + "</font>";
-      document.getElementById("leftDistance").innerHTML = msg2;		// 화면에 출력(이것도 지우세영)
+      //document.getElementById("leftDistance").innerHTML = msg2;		// 화면에 출력(이것도 지우세영)
       SetDistance = SetTime* speed;
 
       if (SetTime < 0) { clearInterval(tid); page_href();}// 시간 종료시 타이머 해제
@@ -118,6 +118,11 @@
 </head>
 
 <body>
+
+   <audio autoplay>
+    <source src="img/babyshark.mp3" type="audio/mp3">
+   </audio>
+
   <div id="divPosition">
 
   <a href="first.html" id="startButton">
@@ -125,7 +130,7 @@
   </div>
 
   <div id="divPosition2" class="image blinking" style="font-weight:bold; font-size: 30px; font-family: Arial;"y>
-  <div class="bubble"> 하테기는 집으로 돌아가는중!!</div>
+  <div class="bubble"> 하테기는 집으로 돌아가는 중!!</div>
   <div id="toilet_map">
     <h2 id="leftTime"></h2>
     <h2 id="leftDistance"></h2>

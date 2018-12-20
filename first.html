@@ -1,20 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>HATEGI</title>
-    <link href="css/first.css" rel="stylesheet">
-  </head>
 
-  <body>
-    <div id="divPosition">
-     <a href="shortcut.html" id="startButton">
-       <img src="img/hategi.png"></a>
-    </div>
+   
 
-    <div id="divPosition2" class="image blinking" style="font-weight:bold; font-size: 30px; font-family: Arial;">
-    <div class="bubble"> Please Touch!!</div>
+    <style>
+  
+
+    #divPosition{
+      position:absolute; height:400px; width:250px; 
+      margin:-200px 0px 0px -330px; 
+      top:50%; left:50%; padding:5px;
+    }
+   
+   #divPosition2{
+    position:absolute; height:300px; width:200px; 
+      margin:-300px 0px 0px -330px; 
+      top:45%; left:66%; padding:5px;
+   }
+
+.bubble 
+{
+position: relative;
+width: 110px;
+height: 58px;
+padding: 20px;
+background: #FFFFFF;
+-webkit-border-radius: 37px;
+-moz-border-radius: 37px;
+border-radius: 37px;
+border: #7F7F7F solid 6px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 11px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+margin-left: -11px;
+bottom: -15px;
+left: 62%;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 18px 14px 0;
+border-color: #7F7F7F transparent;
+display: block;
+width: 0;
+z-index: 0;
+margin-left: -14px;
+bottom: -22px;
+left: 62%;
+}
+
+   .blinking{
+  -webkit-animation:blink 1s ease-in-out infinite alternate;
+  
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+  </style>
+</head>
+
+
+<body>
+ 
+
+<div id="divPosition">
+
+<a href="shortcut.html" id="startButton">
+  <img src="img/hategi.png"></a>
+
+</div>
+
+<div id="divPosition2" class="image blinking" style="font-weight:bold; font-size: 30px; font-family: Arial;"y> 
+<div class="bubble"> Please Touch!!</div>
+
+
+
 </html>
