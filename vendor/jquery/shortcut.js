@@ -68,14 +68,14 @@ function push_xy(domain,x,y) {
   var id;
   var script = "/Hategi-server/escort_queue.php?push&quat_z=0.892&quat_w=-1.5&point_x="+ x + "&point_y=" + y;
   console.log(script);
-  //the server passes back a unique id for this coffee request.
-  //That'll allow us to keep track of future coffee requests
-	$.getJSON( domain + script, function( data ) {
-		status = data["status"];
-		id = data["id"];
-		console.log(id);
-    localStorage['id'] = id;
-	});
+	
+  // 서버에 좌표 저장후, 콜백함수로 로봇의 서비스 상황을 반환받아서 html 메모리에 저장한다.
+  $.getJSON( domain + script, function( data ) {
+	status = data["status"];
+	id = data["id"];
+	console.log(id);
+    	localStorage['id'] = id;
+  });
 }
 
 //check if the coffee has been delivered yet
